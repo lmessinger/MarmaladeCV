@@ -1,4 +1,3 @@
-
 This project shows how to use OpenCV within Marmalade. It uses OpenCV 2.3.1 so you might need to re-import the OpenCV files. All license conditions are the same as in OpenCV.
 
 This is what we did:
@@ -33,28 +32,3 @@ Lior
 
 www.lgorithms.com
 
-Global setup:
- Set up git
-  git config --global user.name "Your Name"
-  git config --global user.email lmessinger@lgorithms.com
-      
- Next steps:
-  mkdir MarmaladeCV
-  cd MarmaladeCV
-  git init
-  touch README
-  git add README
-  git commit -m 'first commit'
-  git remote add origin git@github.com:lmessinger/MarmaladeCV.git
-  git push -u origin master
-      
- Existing Git Repo?
-  cd existing_git_repo
-  git remote add origin git@github.com:lmessinger/MarmaladeCV.git
-  git push -u origin master
-      
- Importing a Subversion Repo?
-  Check out the guide for step by step instructions.
-      
- When you're done:
-  Continue
