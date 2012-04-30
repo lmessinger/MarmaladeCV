@@ -1,0 +1,158 @@
+#!/usr/bin/env mkb
+
+includepaths 
+{ 
+  include
+  opencv/core/opencv2/core
+  opencv/imgproc/opencv2/imgproc
+  IwJPEG
+
+} 
+options 
+{
+enable-exceptions
+s3e-data-dir="data"
+}
+
+package zlib
+subproject zlib
+
+
+
+package libpng
+subproject libpng
+
+
+files {
+[Source]
+(source)
+main.cpp
+ExampleMain.h
+ExampleMain.cpp
+camera.h
+camera.cpp
+
+
+
+
+[opencv2/core]
+(include/opencv2/core)
+core_c.h
+types_c.h
+core.hpp
+eigen.hpp
+internal.hpp
+mat.hpp
+operations.hpp
+version.hpp
+wimage.hpp
+
+[opencv/core]
+(opencv/core)
+alloc.cpp
+arithm.cpp
+array.cpp
+cmdparser.cpp
+convert.cpp
+copy.cpp
+datastructs.cpp
+drawing.cpp
+dxt.cpp
+lapack.cpp
+mathfuncs.cpp
+matmul.cpp
+matop.cpp
+matrix.cpp
+out.cpp
+persistence.cpp
+precomp.cpp
+rand.cpp
+stat.cpp
+system.cpp
+tables.cpp
+precomp.hpp
+
+[opencv2/imgproc]
+(include/opencv2/imgproc)
+imgproc.hpp
+imgproc_c.h
+types_c.h
+
+[opencv/imgproc]
+(opencv/imgproc)
+ accum.cpp
+ approx.cpp
+ canny.cpp
+ color.cpp
+ contours.cpp
+ convhull.cpp
+ corner.cpp
+ cornersubpix.cpp
+ deriv.cpp
+ distransform.cpp
+ emd.cpp
+ featureselect.cpp
+ featuretree.cpp
+ filter.cpp
+ floodfill.cpp
+ gcgraph.hpp
+ geometry.cpp
+ grabcut.cpp
+ histogram.cpp
+ hough.cpp
+ imgwarp.cpp
+ inpaint.cpp
+ kdtree.cpp
+ linefit.cpp
+ lsh.cpp
+ matchcontours.cpp
+ moments.cpp
+ morph.cpp
+ precomp.cpp
+ precomp.hpp
+ pyramids.cpp
+ pyrsegmentation.cpp
+ rotcalipers.cpp
+ samplers.cpp
+ segmentation.cpp
+ shapedescr.cpp
+ smooth.cpp
+ spilltree.cpp
+ subdivision2d.cpp
+ sumpixels.cpp
+ tables.cpp
+ templmatch.cpp
+ thresh.cpp
+ undistort.cpp
+ utils.cpp
+ _featuretree.h
+ _geom.h
+ _imgproc.h
+ _kdtree.hpp
+ _list.h
+
+[IwJPEG]
+(IwJPEG)
+IwJPEG.cpp
+IwJPEG.h
+}
+
+packages
+{
+	libjpeg
+}
+
+
+subprojects {
+iw2d
+iwUI
+libjpeg 
+}
+
+
+#### AUTO GENERATED deployment settings from DeployTool.exe. Do not edit below this line ####
+deployments
+{
+	["Default"]
+	assets='Default'
+}
